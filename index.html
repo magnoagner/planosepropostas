@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Produção de Conteúdo em Vídeo — Planos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F0F0E;
+    --ink2:#1A1917;
+    --cream:#F3EFE6;
+    --dim:#A39C8E;
+    --gold:#C6A24D;
+    --gold-soft:#9C824A;
+    --line:rgba(243,239,230,0.14);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--cream);
+    font-family:'Work Sans', sans-serif;
+    font-weight:300;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:780px;margin:0 auto;padding:0 32px;}
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  em{
+    font-style:italic;
+    font-weight:500;
+    color:var(--gold);
+  }
+  .mark{
+    color:var(--gold);
+    font-size:13px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-weight:500;
+  }
+  .mark::before{content:"✦ ";}
+
+  @page{size:A4;margin:0;}
+  @media print{
+    .wrap{max-width:100%;padding:0 38px;}
+    section{padding:44px 0 !important;}
+    .plan-row, .process-row, .why-grid{page-break-inside:avoid;break-inside:avoid;}
+  }
+
+  /* HERO */
+  header.hero{padding:96px 0 72px;border-bottom:1px solid var(--line);}
+  header.hero .mark{display:block;margin-bottom:22px;}
+  header.hero h1{
+    font-size:clamp(32px,4.6vw,46px);
+    line-height:1.18;
+    max-width:620px;
+    margin-bottom:24px;
+    font-weight:400;
+  }
+  header.hero p{
+    font-size:16px;
+    color:var(--dim);
+    max-width:500px;
+    margin:0;
+  }
+
+  /* SECTION HEAD */
+  section{padding:70px 0;}
+  .section-head{margin-bottom:40px;}
+  .section-head .mark{margin-bottom:14px;}
+  .section-head h2{font-size:28px;font-weight:400;}
+  .lede{font-size:15px;color:var(--dim);max-width:520px;margin:16px 0 0;}
+
+  /* PLANS */
+  .plan-row{
+    border-top:1px solid var(--line);
+    padding:36px 0;
+    display:grid;
+    grid-template-columns:200px 1fr;
+    gap:30px;
+  }
+  .plan-row:last-of-type{border-bottom:1px solid var(--line);}
+  .plan-row.featured{
+    background:var(--ink2);
+    margin:0 -28px;
+    padding:36px 28px;
+    border-top:1px solid var(--gold);
+    border-bottom:1px solid var(--gold);
+    position:relative;
+  }
+  .plan-row .eyebrow{
+    font-size:11.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:600;
+    margin:0 0 10px;
+  }
+  .plan-row h3{font-size:22px;margin:0 0 8px;font-weight:500;}
+  .plan-row .price{
+    font-family:'Fraunces', serif;
+    font-size:27px;
+    color:var(--gold);
+    margin:0 0 4px;
+    font-weight:400;
+  }
+  .plan-row .price span{
+    font-size:13px;
+    color:var(--dim);
+    font-family:'Work Sans',sans-serif;
+  }
+  .plan-row .equiv{font-size:12.5px;color:var(--dim);margin-top:4px;}
+  .plan-row .desc{margin:0 0 16px;color:var(--dim);font-size:14.5px;}
+  .plan-row ul{
+    list-style:none;margin:0 0 14px;padding:0;
+    display:grid;grid-template-columns:1fr 1fr;gap:0 24px;
+  }
+  .plan-row ul li{
+    font-size:13.5px;padding:5px 0 5px 15px;position:relative;color:var(--cream);
+  }
+  .plan-row ul li::before{content:"—";position:absolute;left:0;color:var(--gold-soft);}
+  .plan-row .ideal{font-size:13px;color:var(--dim);font-style:italic;margin:10px 0 0;}
+  @media (max-width:580px){
+    .plan-row{grid-template-columns:1fr;}
+    .plan-row ul{grid-template-columns:1fr;}
+  }
+
+  /* EXTRA SERVICES TABLE */
+  table.extra{width:100%;border-collapse:collapse;font-size:14.5px;}
+  table.extra td{padding:14px 0;border-top:1px solid var(--line);color:var(--cream);}
+  table.extra td:last-child{text-align:right;color:var(--gold);font-weight:500;white-space:nowrap;font-family:'Fraunces',serif;}
+  table.extra tr:last-child td{border-bottom:1px solid var(--line);}
+
+  /* PROCESS */
+  .process-row{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;}
+  .process-row .step{border-top:1px solid var(--gold);padding-top:16px;}
+  .process-row .step .n{font-family:'Fraunces',serif;font-size:22px;color:var(--gold);display:block;margin-bottom:10px;}
+  .process-row .step h4{font-size:14.5px;font-weight:500;margin:0 0 6px;color:var(--cream);text-transform:none;font-family:'Work Sans',sans-serif;}
+  .process-row .step p{margin:0;font-size:13px;color:var(--dim);}
+  @media (max-width:720px){.process-row{grid-template-columns:1fr 1fr;}}
+  @media (max-width:420px){.process-row{grid-template-columns:1fr;}}
+
+  /* WHY GRID */
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 34px;}
+  .why-grid .item h4{font-family:'Fraunces',serif;font-weight:500;font-size:17px;margin:0 0 6px;color:var(--cream);}
+  .why-grid .item p{margin:0;font-size:14px;color:var(--dim);}
+  @media (max-width:580px){.why-grid{grid-template-columns:1fr;}}
+
+  /* CONDITIONS */
+  .conditions{list-style:none;margin:0;padding:0;font-size:14px;color:var(--dim);}
+  .conditions li{padding:12px 0;border-top:1px solid var(--line);}
+  .conditions li:last-child{border-bottom:1px solid var(--line);}
+  .conditions li::before{content:"— ";color:var(--gold-soft);}
+
+  /* FOOTER / CTA */
+  footer.cta{padding:92px 0 72px;border-top:1px solid var(--line);text-align:center;}
+  footer.cta .mark{display:block;margin-bottom:20px;}
+  footer.cta h2{
+    font-size:clamp(28px,4.2vw,38px);
+    max-width:560px;
+    margin:0 auto 20px;
+    font-weight:400;
+    line-height:1.25;
+  }
+  footer.cta p.tagline{
+    color:var(--dim);
+    font-size:15px;
+    max-width:440px;
+    margin:0 auto 34px;
+  }
+  .contact-row{
+    display:flex;justify-content:center;gap:16px;flex-wrap:wrap;
+  }
+  .contact-link{
+    display:inline-block;
+    border:1px solid var(--gold-soft);
+    color:var(--gold);
+    font-size:14px;
+    letter-spacing:0.02em;
+    padding:11px 26px;
+    border-radius:2px;
+    text-decoration:none;
+  }
+  footer.cta .signoff{
+    margin-top:48px;
+    font-size:12px;
+    color:var(--dim);
+    letter-spacing:0.04em;
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="mark">Produção de conteúdo em vídeo</span>
+    <h1>Conteúdo que posiciona, prende atenção <em>e vende mais.</em></h1>
+    <p>Produzimos conteúdos estratégicos em vídeo para Instagram, TikTok, anúncios e outras plataformas digitais — através de captações programadas e produção recorrente, sem precisar contratar uma equipe a cada vídeo.</p>
+  </div>
+</header>
+
+<section id="planos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mark">Investimento</span>
+      <h2>Escolha seu plano</h2>
+    </div>
+
+    <div class="plan-row">
+      <div>
+        <h3>Start</h3>
+        <p class="price">R$ 1.000<span> /mês</span></p>
+      </div>
+      <div>
+        <p class="desc">Para empresas que estão começando a investir em conteúdo profissional.</p>
+        <ul>
+          <li>1 captação mensal de até 4 horas</li>
+          <li>Até 4 vídeos verticais</li>
+          <li>Direção durante a gravação</li>
+          <li>Edição profissional</li>
+          <li>Legendas</li>
+          <li>Tratamento de áudio e imagem</li>
+          <li>Trilha sonora</li>
+          <li>Até 2 rodadas de ajustes por vídeo</li>
+        </ul>
+        <p class="ideal">Ideal para empresas que precisam começar a criar uma presença digital consistente.</p>
+      </div>
+    </div>
+
+    <div class="plan-row featured">
+      <div>
+        <p class="eyebrow">Mais procurado</p>
+        <h3>Pro</h3>
+        <p class="price">R$ 2.800<span> /mês</span></p>
+        <p class="equiv">equivalente a R$ 700 por captação</p>
+      </div>
+      <div>
+        <p class="desc">Para empresas que querem manter uma produção constante de conteúdo.</p>
+        <ul>
+          <li>4 captações mensais</li>
+          <li>Até 4 horas por captação</li>
+          <li>Até 16 vídeos por mês</li>
+          <li>Planejamento básico das pautas</li>
+          <li>Direção durante as gravações</li>
+          <li>Conteúdo comercial</li>
+          <li>Conteúdo institucional</li>
+          <li>Edição profissional</li>
+          <li>Legendas</li>
+          <li>Tratamento de áudio e imagem</li>
+          <li>Trilha sonora</li>
+          <li>Até 2 rodadas de ajustes por vídeo</li>
+        </ul>
+        <p class="ideal">Ideal para empresas que querem publicar conteúdo semanalmente.</p>
+      </div>
+    </div>
+
+    <div class="plan-row">
+      <div>
+        <h3>Performance</h3>
+        <p class="price">R$ 4.000<span> /mês</span></p>
+      </div>
+      <div>
+        <p class="desc">Para empresas que querem transformar o vídeo em uma ferramenta constante de comunicação e vendas.</p>
+        <ul>
+          <li>4 captações mensais</li>
+          <li>Até 4 horas por captação</li>
+          <li>Até 20 vídeos por mês</li>
+          <li>Planejamento de conteúdo</li>
+          <li>Direção de gravação</li>
+          <li>Conteúdos comerciais</li>
+          <li>Conteúdos institucionais</li>
+          <li>Bastidores e autoridade</li>
+          <li>Variações de ganchos e abordagens</li>
+          <li>Conteúdo para anúncios</li>
+          <li>Drive com os arquivos brutos</li>
+          <li>Edição profissional</li>
+          <li>Legendas</li>
+          <li>Tratamento de áudio e imagem</li>
+          <li>Até 2 rodadas de ajustes por vídeo</li>
+        </ul>
+        <p class="ideal">Ideal para empresas que precisam de volume e variedade de conteúdo durante todo o mês.</p>
+      </div>
+    </div>
+
+    <div class="plan-row">
+      <div>
+        <h3>Captação avulsa</h3>
+        <p class="price">A partir de<br>R$ 800</p>
+      </div>
+      <div>
+        <p class="desc">Para empresas que ainda não precisam de um contrato mensal. Captação de até 4 horas.</p>
+        <ul>
+          <li>Operação de câmera</li>
+          <li>Equipamentos</li>
+          <li>Captação de áudio</li>
+          <li>Direção básica</li>
+        </ul>
+        <p class="ideal">Edição pode ser contratada separadamente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="adicionais">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mark">Serviços adicionais</span>
+      <h2>Precisa de mais?</h2>
+      <p class="lede">Caso sua empresa precise de uma produção maior, também é possível contratar serviços adicionais.</p>
+    </div>
+    <table class="extra">
+      <tr><td>Captação adicional — até 4h</td><td>R$ 800</td></tr>
+      <tr><td>Captação adicional — até 6h</td><td>R$ 1.100</td></tr>
+      <tr><td>Captação adicional — até 8h</td><td>R$ 1.500</td></tr>
+      <tr><td>Vídeo editado avulso</td><td>A partir de R$ 300</td></tr>
+      <tr><td>Pacote adicional de 4 vídeos</td><td>R$ 900</td></tr>
+      <tr><td>Pacote adicional de 8 vídeos</td><td>R$ 1.600</td></tr>
+    </table>
+    <p style="font-size:13px;color:var(--dim);margin-top:20px;">Serviços especiais, deslocamentos e produções que demandem estrutura adicional são orçados separadamente.</p>
+  </div>
+</section>
+
+<section id="processo">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mark">Luz, câmera, ação</span>
+      <h2>Como funciona</h2>
+    </div>
+    <div class="process-row">
+      <div class="step"><span class="n">01</span><h4>Planejamento</h4><p>Definimos os objetivos e conteúdos que serão produzidos.</p></div>
+      <div class="step"><span class="n">02</span><h4>Captação</h4><p>Nossa equipe vai até sua empresa ou local definido para a gravação.</p></div>
+      <div class="step"><span class="n">03</span><h4>Produção</h4><p>Os materiais são selecionados e transformados em conteúdos profissionais.</p></div>
+      <div class="step"><span class="n">04</span><h4>Entrega</h4><p>Os vídeos são entregues prontos para publicação nas plataformas digitais.</p></div>
+      <div class="step"><span class="n">05</span><h4>Próxima captação</h4><p>No plano mensal, repetimos o processo para manter sua empresa sempre abastecida.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="porque">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mark">Por que assinar</span>
+      <h2>Por que trabalhar com pacote mensal?</h2>
+      <p class="lede">Porque conteúdo não deve acontecer apenas quando sua empresa "precisa postar".</p>
+    </div>
+    <div class="why-grid">
+      <div class="item"><h4>Mais consistência</h4><p>Sua empresa mantém uma frequência de publicação.</p></div>
+      <div class="item"><h4>Mais planejamento</h4><p>As gravações deixam de acontecer de última hora.</p></div>
+      <div class="item"><h4>Mais variedade</h4><p>Podemos produzir conteúdos comerciais, institucionais, educativos e de autoridade.</p></div>
+      <div class="item"><h4>Mais aproveitamento</h4><p>Uma única gravação pode gerar diversos conteúdos.</p></div>
+      <div class="item"><h4>Mais previsibilidade</h4><p>Sua empresa sabe quanto irá investir todos os meses.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="condicoes">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mark">Condições comerciais</span>
+      <h2>Como trabalhamos</h2>
+    </div>
+    <ul class="conditions">
+      <li>Os planos possuem vigência mensal.</li>
+      <li>As captações são previamente agendadas.</li>
+      <li>Horas não utilizadas não são cumulativas para o mês seguinte.</li>
+      <li>Alterações de agenda devem ser comunicadas previamente.</li>
+      <li>O prazo de entrega será definido conforme o volume contratado e a agenda de produção.</li>
+      <li>O pacote contempla os formatos e quantidades descritos acima.</li>
+      <li>Demandas que ultrapassem o escopo contratado serão orçadas separadamente.</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="cta">
+  <div class="wrap">
+    <span class="mark">Se fizer sentido para sua marca</span>
+    <h2>Vamos construir vídeos que posicionam <em>sua marca com autoridade?</em></h2>
+    <p class="tagline">Escolha o plano que melhor se adapta ao momento da sua empresa e transforme suas gravações em conteúdo profissional durante todo o mês.</p>
+    <div class="contact-row">
+      <a class="contact-link" href="https://instagram.com/magnoagner" target="_blank">@magnoagner</a>
+      <a class="contact-link" href="https://wa.me/5531975098953" target="_blank">(31) 97509-8953</a>
+    </div>
+    <div class="signoff">Produção recorrente. Conteúdo profissional. Mais presença para sua marca.</div>
+  </div>
+</footer>
+
+</body>
+</html>
